@@ -1,5 +1,6 @@
 # kmeans-js
-A reusable implementation of the K-Means++ clustering algorithm in JavaScript (ES6).
+A reusable, functional paradigm, implementation of the K-Means++ clustering algorithm in JavaScript (ES6).
+(note: this library uses features only available in ES6)
 
 ## Usage:
 Import the library with
