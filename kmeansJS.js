@@ -9,7 +9,7 @@
 function KMeans(options) {
   this.k = options.k;
   this.data = options.data;
-  this.maxIterations = options.maxIterations;
+  this.maxIterations = options.maxIterations !== undefined ? options.maxIterations : 100;
   this.verbose = options.verbose;
   this.centroids = [];
   this.heterogeneity = 0;
@@ -48,10 +48,10 @@ KMeans.prototype = {
       // Create a single worker for recentering cluster centroids
       var classifyWorkers = [];
       for (var i = 0; i < threads; i++) {
-        var workerX = new Worker('workers/classify.js');
+        var workerX = new Worker('javascripts/workers/classify.js');
         classifyWorkers.push(workerX);
       }
-      var moveWorker = new Worker('workers/move.js');
+      var moveWorker = new Worker('javascripts/workers/move.js');
 
       // Initialize cluster centers with distance weighted probabilities
       var centroids = smartInit(data,k);
