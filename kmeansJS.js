@@ -1,8 +1,8 @@
 // ========================================================================
 //                  Multi-Threaded K-Means Clustering
-// Given a 2 dimensional matrix of data (of arbitrary dimensionality)
-// calculates elementwise similarity and groups data into k clusters for
-// post-facto classification.
+// Given a N dimensional matrix of data, calculates elementwise
+// similarity and groups data into k clusters for post-facto
+// classification.
 // Created by: Ryan McCullough
 // =========================================================================
 
