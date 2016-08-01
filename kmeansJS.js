@@ -48,10 +48,10 @@ KMeans.prototype = {
       // Create a single worker for recentering cluster centroids
       var classifyWorkers = [];
       for (var i = 0; i < threads; i++) {
-        var workerX = new Worker('javascripts/classify.js');
+        var workerX = new Worker('workers/classify.js');
         classifyWorkers.push(workerX);
       }
-      var moveWorker = new Worker('javascripts/move.js');
+      var moveWorker = new Worker('workers/move.js');
 
       // Initialize cluster centers with distance weighted probabilities
       var centroids = smartInit(data,k);
