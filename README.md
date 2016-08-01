@@ -53,5 +53,5 @@ options = {
 ~~~~
 * k: specifies the number of clusters to generate (required)
 * data: the matrix of data you wish to classify (required)
-* maxIterations: the number of complete iterations through the data the algorithm will make. (optional: default = 10)
-* verbose: if set 'true' the assignments and centroids will be logged to the console on each iterations (optional: default = false)
+* maxIterations: the number of complete iterations through the data the algorithm will make. (optional: default = 100)
+* verbose: if set 'true' the data will be logged to the console on each iteration (optional: default = false)
